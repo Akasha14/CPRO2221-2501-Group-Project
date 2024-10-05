@@ -21,7 +21,7 @@ const LoadGame = ({ onBack }) => {
         <button className="action-button">Accept</button>
         <button className="action-button" onClick={onBack}>
           Back
-        </button>{" "}
+        </button>
         {/* Back Button */}
       </div>
     </div>
