@@ -31,3 +31,82 @@ select {
   font-size: 16px;
   width: 200px;
 }
+
+/* Add background image and style the main container */
+.load-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./components/loadGame.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 20px;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+}
+
+/* Style the header */
+.load-game-header {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffd700; /* Gold color for the header */
+}
+
+/* Style each save slot (box) */
+/* Style each save slot (box) */
+/* Style each save slot (box) */
+.save-slot {
+  width: 80%;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  border: 2px solid #ffd700; /* Gold border */
+  border-radius: 10px;
+  text-align: left;
+  color: #fff;
+}
+
+/* Ensure the heading appears as a block element */
+.save-slot h1 {
+  margin-bottom: 10px; /* Space between heading and paragraphs */
+}
+
+/* Container for the paragraphs (wrapping them in flexbox) */
+.save-slot .paragraph-container {
+  display: flex; /* Flexbox to align paragraphs horizontally */
+  justify-content: space-between; /* Distribute space between items */
+  align-items: center; /* Align items vertically to center */
+}
+
+/* Optional: Style individual paragraphs if needed */
+.save-slot p {
+  margin: 0 10px; /* Add margin between paragraphs */
+  display: inline-block; /* Ensure they behave as inline elements */
+}
+
+/* Style the footer for the buttons */
+.load-game-footer {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-top: 30px;
+}
+
+/* Style the action buttons */
+.action-button {
+  padding: 10px 20px;
+  background-color: #444;
+  color: #fff;
+  border: 2px solid #ffd700; /* Gold border for the buttons */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.action-button:hover {
+  background-color: #777; /* Lighter grey on hover */
+}
