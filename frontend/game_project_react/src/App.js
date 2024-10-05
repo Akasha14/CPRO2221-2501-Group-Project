@@ -6,65 +6,67 @@ import LoadGame from "./components/LoadGame";
 import "./main.css";
 
 const App = () => {
-  // Boolean state to determine whether to display or not.
+  // Boolean state to control the character creation screen
   const [isCharacterCreation, setIsCharacterCreation] = useState(false);
-
-  // Object to hold characters data once submitted.
+  
+  // Object to hold character data after creation
   const [characterData, setCharacterData] = useState(null);
-  // Boolean state to determine whether the game has started
+  
+  // Boolean state to track if the game has started
   const [isGameStarted, setIsGameStarted] = useState(false);
-
+  
+  // New: Boolean state to track if the game is loading
   const [isLoadGame, setIsLoadGame] = useState(false);
 
-  // New game. Re-render with character creation screen.
+  // Handle starting a new game by showing the character creation screen
   const handleStartNewGame = () => {
     setIsCharacterCreation(true);
   };
 
-  // Load saved games - show LoadGame screen
+  // Handle loading a saved game
   const handleLoadGame = () => {
     setIsLoadGame(true); // Show LoadGame screen when button is clicked
   };
 
-  // Go back to start screen from LoadGame
+  // Go back to the start screen from LoadGame
   const handleBackToStart = () => {
     setIsLoadGame(false); // Hide LoadGame screen and go back to StartScreen
   };
 
-  // Continue game.(TO BE ADDED)
+  // Placeholder for the "continue game" functionality
   const handleContinueGame = () => {
     console.log("Continue game functionality to be implemented");
   };
 
-  // Update character data
+  // Handle character creation, transition to the game canvas, and store character data
   const handleCreateCharacter = (character) => {
-    setCharacterData(character);
-    setIsCharacterCreation(false); // Exit character creation
+    setCharacterData(character); // Save the created character
+    setIsCharacterCreation(false); // Exit character creation screen
     setIsGameStarted(true); // Start the game
     console.log("Character created:", character);
-    // Add further logic to start the game or load the game state
   };
 
   return (
     <div className="app">
-      {isGameStarted ? ( // Check if the game has started
-        <GameCanvas characterData={characterData} /> // Pass characterData if needed
+      {isGameStarted ? ( 
+        // If the game has started, display the game canvas
+        <GameCanvas characterData={characterData} /> 
       ) : isCharacterCreation ? (
-        // True. Character creation screen.
+        // If character creation is in progress, display the character creation screen
         <CharacterCreation onCreateCharacter={handleCreateCharacter} />
       ) : isLoadGame ? (
         // Render load game screen
         <LoadGame onBack={handleBackToStart} />
       ) : (
-        // False. Start screen.
+        // Otherwise, show the start screen
         <StartScreen
           onStartNewGame={handleStartNewGame}
           onContinueGame={handleContinueGame}
-          onLoadGame={handleLoadGame} // New prop
+          onLoadGame={handleLoadGame} // New prop to load the game
         />
       )}
-
-      {/* If character created, you can show additional information if needed */}
+      
+      {/* Optionally display the created character info before the game starts */}
       {characterData && !isGameStarted && (
         <p>
           Character Created: {characterData.name}, Job: {characterData.job}
