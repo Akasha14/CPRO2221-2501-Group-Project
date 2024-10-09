@@ -4,6 +4,9 @@ import CharacterCreation from "./components/CharacterCreation";
 import GameCanvas from "./components/GameCanvas";
 import LoadGame from "./components/LoadGame";
 import "./main.css";
+import './App.css';
+import RPGMenu from './components/RPGMenu';
+import AudioPlayer from './components/AudioPlayer'; // Import the AudioPlayer
 
 const App = () => {
   // Boolean state to determine whether to display or not.
@@ -73,5 +76,14 @@ const App = () => {
     </div>
   );
 };
+
+function App() {
+  return (
+    <div className="App">
+      <AudioPlayer /> 
+      <RPGMenu />
+    </div>
+  );
+}
 
 export default App;
