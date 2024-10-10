@@ -1,4 +1,13 @@
 package com.example.gameProject.repository;
 
-public class JobRepository {
+import com.example.gameProject.entity.Job;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+// Data access with Job entity in database.
+@Repository
+// Extends Jpa to gain default methods.
+public interface JobRepository extends JpaRepository<Job, Long> {
 }
