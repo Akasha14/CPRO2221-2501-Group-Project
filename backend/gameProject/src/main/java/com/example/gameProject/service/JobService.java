@@ -7,11 +7,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-// Link between controller and repository.
 @Service
 public class JobService {
 
-    // Methods related to job entity.
     @Autowired
     private JobRepository jobRepository;
     public List<Job> getAllJobs() {
