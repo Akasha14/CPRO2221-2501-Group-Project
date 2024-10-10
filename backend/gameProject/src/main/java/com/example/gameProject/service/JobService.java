@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class JobService {
 
-    // Methods related to job entity.
+    // Methods telling how data is handled related to job entity.
     @Autowired
     private JobRepository jobRepository;
     public List<Job> getAllJobs() {

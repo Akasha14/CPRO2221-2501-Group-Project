@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Howler from 'react-howler';
+import React, { useState } from "react";
+import Howler from "react-howler";
 
-const AudioPlayer = ({ showVolumeControl = false }) => { 
+const AudioPlayer = ({ showVolumeControl = false }) => {
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [volume, setVolume] = useState(1);
 
@@ -11,21 +11,21 @@ const AudioPlayer = ({ showVolumeControl = false }) => {
         <input
           type="checkbox"
           checked={soundEnabled}
-          onChange={() => setSoundEnabled(prev => !prev)}
+          onChange={() => setSoundEnabled((prev) => !prev)}
         />
         Sound
       </label>
-      
+
       {soundEnabled && (
         <Howler
-          src={`../resources/music/raining-village-video-game-theme-141777.mp3`} 
+          src={`../resources/music/raining-village-video-game-theme-141777.mp3`}
           playing={true}
           loop={true}
           volume={volume}
         />
       )}
 
-      {soundEnabled && showVolumeControl && ( 
+      {soundEnabled && showVolumeControl && (
         <div>
           <label>
             Volume:

@@ -4,9 +4,9 @@ import CharacterCreation from "./components/CharacterCreation";
 import GameCanvas from "./components/GameCanvas";
 import LoadGame from "./components/LoadGame";
 import "./main.css";
-import './App.css';
-import RPGMenu from './components/RPGMenu';
-import AudioPlayer from './components/AudioPlayer'; // Import the AudioPlayer
+import "./App.css";
+// import RPGMenu from "./components/RPGMenu";
+import AudioPlayer from "./components/AudioPlayer"; // Import the AudioPlayer
 
 const App = () => {
   // Boolean state to determine whether to display or not.
@@ -49,6 +49,7 @@ const App = () => {
 
   return (
     <div className="app">
+      <AudioPlayer />
       {isGameStarted ? ( // Check if the game has started
         <GameCanvas characterData={characterData} /> // Pass characterData if needed
       ) : isCharacterCreation ? (
@@ -76,13 +77,13 @@ const App = () => {
   );
 };
 
-function App() {
-  return (
-    <div className="App">
-      <AudioPlayer /> 
-      <RPGMenu />
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div className="App">
+//       <AudioPlayer />
+//       <RPGMenu />
+//     </div>
+//   );
+// }
 
 export default App;
