@@ -16,7 +16,6 @@ const App = () => {
   const [characterData, setCharacterData] = useState(null);
   // Boolean state to determine whether the game has started
   const [isGameStarted, setIsGameStarted] = useState(false);
-
   const [isLoadGame, setIsLoadGame] = useState(false);
 
   // New game. Re-render with character creation screen.
