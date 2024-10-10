@@ -6,7 +6,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+// Data access with Job entity in database.
 @Repository
+// Extends Jpa to gain default methods.
 public interface JobRepository extends JpaRepository<Job, Long> {
-    Optional<Job> findByName(String name);
 }

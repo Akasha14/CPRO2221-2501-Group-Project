@@ -1,8 +1,10 @@
+// Connects and fetchs data from backend api.
+
 export const getJobs = async () => {
   try {
     const response = await fetch("http://localhost:8080/api/jobs");
 
-    // Check if the response is ok (status code 200-299)
+    // Check if the response is ok.
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
@@ -11,6 +13,5 @@ export const getJobs = async () => {
     return data;
   } catch (error) {
     console.error("Error fetching jobs:", error);
-    throw error; // Re-throw the error if needed for further handling
   }
 };
