@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import StartScreen from "./components/StartScreen";
 import CharacterCreation from "./components/CharacterCreation";
-import GameCanvas from "./components/GameCanvas";
+import GameCanvas from "./overworldComponents/GameCanvas";
 import LoadGame from "./components/LoadGame";
 import "./main.css";
 import "./App.css";

@@ -42,4 +42,25 @@ public class Job {
     public List<String> getSkills() {
         return skills;
     }
+
+    // Setters
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public void setDefense(int defense) {
+        this.defense = defense;
+    }
+
+    public void setMana(int mana) {
+        this.mana = mana;
+    }
+
+    public void setSkills(List<String> skills) {
+        this.skills = skills;
+    }
 }
