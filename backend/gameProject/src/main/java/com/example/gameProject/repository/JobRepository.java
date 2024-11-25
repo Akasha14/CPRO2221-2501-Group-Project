@@ -4,7 +4,6 @@ import com.example.gameProject.entity.Job;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
 
 // Data access with Job entity in database.
 @Repository
