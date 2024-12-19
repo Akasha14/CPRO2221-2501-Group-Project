@@ -13,7 +13,7 @@ public class JobService {
 
     // Methods telling how data is handled related to job entity.
     @Autowired
-    private JobRepository jobRepository;
+    public JobRepository jobRepository;
     public List<Job> getAllJobs() {
         return jobRepository.findAll();
     }
